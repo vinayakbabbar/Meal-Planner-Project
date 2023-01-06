@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="App.js"></script>
+</head>
+<body>
 
+    <nav>
+        <img id="logo" src="Meal_Planner-logo.png" alt="logo"/>
+    </nav>
+   <form >
+        <div>
+            <input id="height" type="text" placeholder="Enter Height in Cm" required/>
+            <input id="weight" type="text" placeholder="Enter Weight in Kg" required/>
+            <input id="age" type="text" placeholder="Enter Age in Years" required/>
+        </div>
+        <div>
+        <select id="gender">
+            <option >Enter Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <select id="activity">
+            <option>Enter Activity Level</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="active">Active</option>
+        </select>
+        </div>
+        <div>   
+            <button id="generate-meals-button" type="Submit" >Generate Meals</button>
+        </div>
+    </form>
+    <div id="meal-container" class="meal-container-hide">
+        <div id="breakfast" class="cards">
+            <span>BREAKFAST</span>
+            <div>
+                <div class="img">
+                    <img id="img1"
+                       width="100%"
+                       height="100%" 
+                       style="border-top-left-radius: 15px;border-top-right-radius: 15px;"
+                    />
+                </div>
+                <div class="info">
+                    <span id="meal1"></span>
+                    <span>Calories 300</span>
+                    <button id="get-receipe1">Get Receipe</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="lunch" class="cards">
+            <span>LUNCH</span>
+            <div>
+                <div class="img">
+                    <img id="img2" 
+                       width="100%"
+                       height="100%" 
+                       style="border-top-left-radius: 15px;border-top-right-radius: 15px;"
+                    />
+
+                </div>
+                <div class="info">
+                    <span id="meal2"></span>
+                    <span>Calories 300</span>
+                    <button id="get-receipe2">Get Receipe</button>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div id="dinner" class="cards">
+            <span>DINNER</span>
+            <div>
+                <div class="img">
+                    <img id=img3 
+                       width="100%"
+                       height="100%" 
+                       style="border-top-left-radius: 15px;border-top-right-radius: 15px;"
+                    />
+
+                </div>
+                <div class="info">
+                    <span id="meal3"></span>
+                    <span>Calories 300</span>
+                    <button id="get-receipe3" >Get Receipe</button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+<div id="receipe-container" class="hidden1">
+   
+    <div id="receipe1" class="hidden">
+       
+        <table class="ingredients">
+            <thead >
+                <tr >
+                    <th><h3>INGREDIENTS</h3></th>                   
+                </tr>
+            </thead>
+            <tbody id="tbody1">                
+            </tbody>          
+        </table> 
+
+        <table class="steps">
+            <thead >
+                <tr >
+                    <th><h3>STEPS</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody2">               
+            </tbody>
+        </table> 
+
+        <table class="equipment">
+            <thead >
+                <tr >
+                    <th><h3>EQUIPMENT</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody3">              
+            </tbody>
+        </table> 
+
+    </div>
+
+
+    <div id="receipe2" class="hidden">
+       
+        <table class="ingredients">
+            <thead >
+                <tr >
+                    <th><h3>INGREDIENTS</h3></th>                   
+                </tr>
+            </thead>
+            <tbody id="tbody1">                
+            </tbody>          
+        </table> 
+
+        <table class="steps">
+            <thead >
+                <tr >
+                    <th><h3>STEPS</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody2">               
+            </tbody>
+        </table> 
+
+        <table class="equipment">
+            <thead >
+                <tr >
+                    <th><h3>EQUIPMENT</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody3">              
+            </tbody>
+        </table> 
+
+    </div>
+
+
+    <div id="receipe3" class="hidden">
+       
+        <table class="ingredients">
+            <thead >
+                <tr >
+                    <th><h3>INGREDIENTS</h3></th>                   
+                </tr>
+            </thead>
+            <tbody id="tbody1">                
+            </tbody>          
+        </table> 
+
+        <table class="steps">
+            <thead >
+                <tr >
+                    <th><h3>STEPS</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody2">               
+            </tbody>
+        </table> 
+
+        <table class="equipment">
+            <thead >
+                <tr >
+                    <th><h3>EQUIPMENT</h3></th>
+                </tr>
+            </thead>
+            <tbody id="tbody3">              
+            </tbody>
+        </table> 
+
+    </div>
+
+
+</div>
+
+
+
+    
+</body>
+</html>

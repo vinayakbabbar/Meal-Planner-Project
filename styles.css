@@ -1,1 +1,214 @@
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#logo{
+    width: 15rem;
+    height: 2rem;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+nav{
+    text-align: left;
+    
+}
+
+.content{
+    display:block;
+    position:absolute;
+    top:auto;  
+    
+}
+
+
+.hidden{
+    visibility:hidden;
+    
+}
+
+.hidden1{
+    display: none;
+}
+.content1{
+display: grid;
+grid-template-columns: auto;
+
+}
+
+nav{
+    background-color: orange;
+    width: auto;
+    height:3rem;
+}
+
+form>div{
+    margin-top: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+body{
+    text-align: center;
+}
+
+.meal-container-hide{
+    display:none;
+}
+
+.meal-container-show{
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78.9rem;
+    height: 25rem;
+    
+
+    background-color: pink;
+    
+    justify-content: space-evenly;
+
+}
+#get-receipe1,#get-receipe2,#get-receipe3{
+    width: 10rem;
+    border-radius: 10px;
+    text-align: center;
+    height: 2rem;
+    font-size: 1rem;
+    align-self: center;
+    border: solid black 1px;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+
+input,select{
+   border: 0px;
+   background-color: rgb(231, 224, 219);
+   border-radius: 10px;
+   width:200px;
+   height:30px;
+   padding-left: 10px;
+}
+#generate-meals-button{
+    border: 0px;
+    background-color: rgb(215, 94, 8);
+    border-radius: 10px;
+    width:200px;
+    height:30px;
+    padding-left: 10px;
+    color:aliceblue;
+    cursor: pointer;
+}
+
+
+.img{
+    border: 0px;
+    width:250px;
+    height:200px;
+    background-color:rgb(169, 233, 49) ;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+   
+}
+
+.info{
+    border: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width:250px;
+    height:125px;
+   
+    background-color:rgb(233, 138, 49) ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#receipe1,#receipe2,#receipe3{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+    gap: .5rem;
+  
+    
+
+    align-items: stretch;
+    align-items: flex-start;
+
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    
+    width: 78.9rem;
+
+
+ 
+    
+
+    background-color: rgb(105, 180, 223);
+    
+    
+    overflow-wrap: break-word;
+
+
+}
+tbody{
+    text-align: left;
+   
+}
+
+
+#receipe-container{
+
+   
+
+    width: auto;
+    height: auto;
+    overflow: hidden;
+   
+    
+
+}
+
+
+h3{
+    margin-bottom: 2.5rem;
+    color:rgb(23, 22, 22) ;
+    
+}
+.ingredients{
+    width:30%;
+    box-shadow: 4px 4px 4px -3px #182e49;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 5px 8px 8px;
+    background-color: rgb(252, 221, 162);
+}
+.steps{
+    width:50%;
+    box-shadow: 4px 4px 4px -3px #182e49;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 5px 8px 8px;
+    background-color: rgb(252, 221, 162);
+}
+.equipment{
+    width:20%;
+    box-shadow: 4px 4px 4px -3px #182e49;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 5px 8px 8px;
+    background-color: rgb(252, 221, 162);
+}
+
+
