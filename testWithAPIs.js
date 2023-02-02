@@ -8,6 +8,12 @@ const loader=document.querySelector("#loader");
 const mealContainer=document.querySelector("#meal-container")
 
 var mealIdObject=[];
+var api='85a9ced707b04aa8ad63556f0fb95d0f';
+
+    // API:-85a9ced707b04aa8ad63556f0fb95d0f
+    //      42a9bb5d19ba4f8e9019474fe617153b
+    
+    
 
 
 generateMealsButton.addEventListener("click",function(event){
@@ -90,9 +96,8 @@ generateMealsButton.addEventListener("click",function(event){
 
 
     
-    
 
-    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=b545271198dc493cbfdbf80a9437a16b&targetCalories=${caloriesRequirment}`)
+    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${api}&targetCalories=${caloriesRequirment}`)
         .then((response) => response.json())
         .then((result1) => {
             
@@ -104,7 +109,7 @@ generateMealsButton.addEventListener("click",function(event){
                 var mealsId=value.id;
                 mealIdObject.push(mealsId);
                 
-                fetch(`https://api.spoonacular.com/recipes/${mealsId}/information?apiKey=b545271198dc493cbfdbf80a9437a16b&includeNutrition=false`)
+                fetch(`https://api.spoonacular.com/recipes/${mealsId}/information?apiKey=${api}&includeNutrition=false`)
                 .then((response) => response.json())
                 .then((result) => {
                   
@@ -174,7 +179,7 @@ const receipeButton3=document.querySelector("#get-receipe3");
 
 receipeButton1.addEventListener('click',()=>{
 
-    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[0]}/information?apiKey=b545271198dc493cbfdbf80a9437a16b&includeNutrition=false`)
+    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[0]}/information?apiKey=${api}&includeNutrition=false`)
     .then((response) => response.json())
     .then((result) => {
 
@@ -236,7 +241,7 @@ receipeButton1.addEventListener('click',()=>{
 
 receipeButton2.addEventListener('click',()=>{
 
-    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[1]}/information?apiKey=b545271198dc493cbfdbf80a9437a16b&includeNutrition=false`)
+    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[1]}/information?apiKey=${api}&includeNutrition=false`)
     .then((response) => response.json())
     .then((result) => {
 
@@ -301,7 +306,7 @@ receipeButton2.addEventListener('click',()=>{
 
  receipeButton3.addEventListener('click',()=>{
 
-    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[2]}/information?apiKey=b545271198dc493cbfdbf80a9437a16b&includeNutrition=false`)
+    fetch(`https://api.spoonacular.com/recipes/${mealIdObject[2]}/information?apiKey=${api}&includeNutrition=false`)
     .then((response) => response.json())
     .then((result) => {
 
