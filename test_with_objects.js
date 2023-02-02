@@ -6,6 +6,13 @@ const activity=document.querySelector("#activity");
 const generateMealsButton=document.querySelector("#generate-meals-button");
 
 
+var myObject=[];
+var ingridientsList=[];
+var stepsList=[];
+var equipmentList=[];
+var meal0=[];
+var meal1=[];
+var meal2=[];
 
 
 generateMealsButton.addEventListener("click",function(event){
@@ -79,7 +86,7 @@ generateMealsButton.addEventListener("click",function(event){
     
     
 
-    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=b545271198dc493cbfdbf80a9437a16b&targetCalories=${caloriesRequirment}`)
+    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=dfa76644eeb6444bb9990d8d5f059e2f&targetCalories=${caloriesRequirment}`)
         .then((response) => response.json())
         .then((result1) => {
             
@@ -90,7 +97,7 @@ generateMealsButton.addEventListener("click",function(event){
 
                 var mealsId=value.id;
                 
-                fetch(`https://api.spoonacular.com/recipes/${mealsId}/information?apiKey=b545271198dc493cbfdbf80a9437a16b&includeNutrition=false`)
+                fetch(`https://api.spoonacular.com/recipes/${mealsId}/information?apiKey=dfa76644eeb6444bb9990d8d5f059e2f&includeNutrition=false`)
                 .then((response) => response.json())
                 .then((result) => {
                   
@@ -104,48 +111,51 @@ generateMealsButton.addEventListener("click",function(event){
                     dishName.innerText=result.title;
 
 
+                       
                   
-
                         ingredientBody=document.querySelector("#receipe"+(index+1)+ ">.ingredients > #tbody1");
                         
-
                         result.extendedIngredients.forEach(function(ingredientsValue,indexNumber){
 
-                           
+                        // ingridientsList[indexNumber]=ingredientsValue.original;
+                        // myObject[`${index}`]={indexNumber,ingredientsValue.original};
+                        console.log(`${index} ${indexNumber} ${ingredientsValue.original}`);
 
                         var tr=document.createElement("tr");
-                        var td=document.createElement("td");
-
-                       
-                        
+                        var td=document.createElement("td");                      
                         td.innerText=(`${indexNumber+1})  ${ingredientsValue.original}`)
-                       
                         tr.appendChild(td);
-                        
                         ingredientBody.appendChild(tr);
-                        
+                        })
+
+                        result.extendedIngredients.map(function(ingredientsValue,indexNumber){
+
+                            // ingridientsList[indexNumber]=ingredientsValue.original;
+                            ingridientsList.push(ingredientsValue.original);
+
+
 
                         })
+
+                        // myObject[index]={0:ingridientsList};
+                        // Object.assign(myObject[index],ingridientsList)
+
 
 
                         stepsBody=document.querySelector("#receipe"+(index+1)+ ">.steps > #tbody2");
-
                         result.analyzedInstructions[0].steps.forEach(function(stepsValue,indexNumberForSteps){
 
+                        stepsList[indexNumberForSteps]=stepsValue.step;
+
                         var tr=document.createElement("tr");
-                        var td=document.createElement("td");
-
-                       
-                        
+                        var td=document.createElement("td");                   
                         td.innerText=(`${indexNumberForSteps+1})  ${stepsValue.step}`)
-                        
                         tr.appendChild(td);
-                        
-                        stepsBody.appendChild(tr);
-                        
-
+                        stepsBody.appendChild(tr);                       
                         })
 
+                        // myObject[index]={1:stepsList};
+                        
 
                         equipmentBody=document.querySelector("#receipe"+(index+1)+ ">.equipment > #tbody3");
 
@@ -155,7 +165,7 @@ generateMealsButton.addEventListener("click",function(event){
                             
                             equipmentValue.equipment.forEach(function(deepEquipmentValue,indexNumberForDeepEquipment){
                                
-                                
+                                equipmentList[indexCount-1]=deepEquipmentValue.name;
 
                                 var tr=document.createElement("tr");
                                 var td=document.createElement("td");
@@ -173,14 +183,19 @@ generateMealsButton.addEventListener("click",function(event){
 
                             })
 
-                            
+                            // myObject[index]={2:equipmentList};
                            
 
                         })
                         
                         
-                        
-                   
+                        // Object.assign(meal2,ingridientsList,stepsList,equipmentList)
+                        // // ingridientsList=[];
+                        // // stepsList=[];
+                        // // equipmentList=[];
+                        // Object.assign(myObject,meal2)
+                        // myObject.unshift(ingridientsList);
+                        // ingridientsList=[];
                 
 
                     
@@ -190,6 +205,7 @@ generateMealsButton.addEventListener("click",function(event){
                 }); 
             });
         })
+        
         
 
         .catch((error) => {
@@ -201,7 +217,6 @@ generateMealsButton.addEventListener("click",function(event){
 
 
         
-
 
 
 

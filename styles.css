@@ -54,6 +54,7 @@ form>div{
 }
 body{
     text-align: center;
+    height: auto;
 }
 
 .meal-container-hide{
@@ -173,11 +174,9 @@ tbody{
 
 #receipe-container{
 
-   
-
     width: auto;
     height: auto;
-    overflow: hidden;
+    background-color: blueviolet;
    
     
 
@@ -211,4 +210,60 @@ h3{
     background-color: rgb(252, 221, 162);
 }
 
+
+
+
+#loader{
+    display:none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    /* width: 120px;
+    height: 120px; */
+
+    width: 120px;
+    height: 25rem;
+   
+
+    
+}
+
+
+
+
+
+#sparkles > path {
+	animation: sparklyBits 1000ms infinite;
+	position: absolute;
+}
+
+#message {
+	margin-top: 20px;
+	text-align: center;
+}
+
+@for $i from 1 through 29 {
+	#sparkles > path:nth-child(#{$i}) {
+		animation-delay: (35ms * $i);
+	}
+}
+
+@keyframes sparklyBits {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* body {
+	align-items: center;
+	background-color: #FAFAFA;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+} */
 
