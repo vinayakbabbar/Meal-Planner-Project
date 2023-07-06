@@ -3,6 +3,81 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+}
+
+nav{
+    /* text-align: left;
+    background: rgb(252,128,25);
+    background: linear-gradient(63deg, rgba(252,128,25,1) 0%, rgba(255,255,255,1) 100%);
+    width: auto;
+    height:5rem; */
+
+    position: fixed;
+    top: 0;
+    text-align: left;
+    background: rgba(255, 254, 254, 0.495);
+    border-bottom: 1px solid white;
+    color: #f2f2f2;
+    width: 100%;
+    padding: 20px;
+    height:5rem;
+    z-index: 1;
+    
+}
+nav.active {
+    background-color: rgb(255, 255, 255); /* Change background color on scroll */
+  }
+
+.bg-video{
+    width: 1263px;
+    
+}
+.heading{
+    position: absolute;
+    top: 5rem;
+    /* left:26rem; */    
+    width:1263px;
+    height: 36.7rem;
+    padding-top: 12rem;    
+    background: rgba(255, 254, 254, 0.495);
+    
+    /* border-radius: 2rem; */
+    
+    text-transform: uppercase;  
+}
+h1{
+    color: #fa4908be;
+    font-size:4rem;
+    font-style: italic;
+
+}
+h2{
+    color: #41b91cff;
+    font-style: normal;
+    font-size:3rem;
+    font-family:sans-serif
+    
+}
+.generate-meals{
+    width: 14rem;
+    height: 3rem;
+    font-size: larger;
+    background-color: #fc8019;
+    border: none;
+    border-radius: 2rem;
+    
+    margin-top: 5rem;
+    cursor: pointer;
+}
+.generate-meals a{
+    text-decoration: none;
+    color: white;
+}
+.generate-meals:hover{
+    background-color: #f6a563;
+    color: white
+
 }
 
 #logo{
@@ -11,10 +86,7 @@
     margin-top: 5px;
     margin-left: 15px;
 }
-nav{
-    text-align: left;
-    
-}
+
 
 .content{
     display:block;
@@ -38,11 +110,11 @@ grid-template-columns: auto;
 
 }
 
-nav{
-    background-color: orange;
-    width: auto;
-    height:3rem;
+form{
+    background-color: #f6a563;
+    height: 100vh;
 }
+
 
 form>div{
     margin-top: 3.125rem;

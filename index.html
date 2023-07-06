@@ -9,11 +9,23 @@
     <script defer src="testWithAPIs.js"></script>
 </head>
 <body>
+    <div>
+        <nav class="sticky-nav">
+            <img id="logo" src="Meal_Planner-logo.png" alt="logo"/>
+        </nav>
+    
+        <video autoplay muted loop class="bg-video">
+            <source src="/Assets/Background video.mp4" type="video/mp4">
+        </video>
+        <div class="heading">
+            <h1>Eat Healthy</h1>
+            <h2>Stay Healthy</h2>
+            <button class="generate-meals" ><a href="#form">Start Generating Meals</a></button>
+        </div>
 
-    <nav>
-        <img id="logo" src="Meal_Planner-logo.png" alt="logo"/>
-    </nav>
-   <form >
+        
+    </div>
+   <form id="form">
         <div>
             <input id="height" type="text" placeholder="Enter Height in Cm" required/>
             <input id="weight" type="text" placeholder="Enter Weight in Kg" required/>
