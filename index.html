@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Planner</title>
     <link rel="stylesheet" href="styles.css" />
+    
     <script defer src="testWithAPIs.js"></script>
+   
 </head>
+
+<header>
+    <nav class="sticky-nav">
+        <img id="logo" src="Meal_Planner-logo.png" alt="logo"/>
+    </nav>
+
+</header>
 <body>
-    <div>
-        <nav class="sticky-nav">
-            <img id="logo" src="Meal_Planner-logo.png" alt="logo"/>
-        </nav>
+    <div class="hero">      
     
         <video autoplay muted loop class="bg-video">
             <source src="/Assets/Background video.mp4" type="video/mp4">
@@ -21,33 +27,58 @@
             <h1>Eat Healthy</h1>
             <h2>Stay Healthy</h2>
             <button class="generate-meals" ><a href="#form">Start Generating Meals</a></button>
-        </div>
-
-        
+        </div>        
     </div>
-   <form id="form">
-        <div>
-            <input id="height" type="text" placeholder="Enter Height in Cm" required/>
-            <input id="weight" type="text" placeholder="Enter Weight in Kg" required/>
-            <input id="age" type="text" placeholder="Enter Age in Years" required/>
+
+    <div class="form-filling">
+        <h2 class="form-heading">Lets fill this form and Enjoy your Meals</h2>
+
+        <div class="form-gif">
+            <form id="form">
+
+                <div class="inputBox">
+                    <input id=height type="text" required/>
+                    <span> Height in Cm</span>
+                </div>
+                
+                <div class="inputBox">
+                    <input id= weight type="text" required/>
+                    <span> Weight in Kg</span>
+                </div>
+
+                <div class="inputBox">
+                    <input id="age" type="text" required/>
+                    <span> Age in Years</span>
+                </div>
+                    
+                <div class="dropdown-gender">
+                    <input type="text" id="gender"  class="textbox-gender"
+                    placeholder="Enter Gender" readonly ></input>
+                    <div class="option">
+                        <div  onclick="showGender('Male')"><ion-icon name="man"></ion-icon>Male</div>
+                        <div  onclick="showGender('Female')"><ion-icon name="woman"></ion-icon>Female</div>
+                    </div>
+
+                </div>
+
+                <div class="dropdown-activity">
+                    <input type="text" id="activity"  class="textbox-activity"
+                    placeholder="Enter Activity Level" readonly ></input>
+                    <div class="option">
+                        <div  onclick="showActivity('Light')"><ion-icon name="accessibility"></ion-icon></ion-icon>Light</div>
+                        <div  onclick="showActivity('Moderate')"><ion-icon name="walk"></ion-icon></ion-icon></ion-icon>Moderate</div>
+                        <div  onclick="showActivity('Active')"><ion-icon name="barbell"></ion-icon>Active</div>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <button id="generate-meals-button" type="Submit" ><a href="#get-receipe3">Generate Meals</a></button>
+                </div>
+            </form>
+            <img class="standing-man" src="/Assets/urban-line-man-with-coffee.gif" />
         </div>
-        <div>
-        <select id="gender">
-            <option >Enter Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-        <select id="activity">
-            <option>Enter Activity Level</option>
-            <option value="light">Light</option>
-            <option value="moderate">Moderate</option>
-            <option value="active">Active</option>
-        </select>
-        </div>
-        <div>   
-            <button id="generate-meals-button" type="Submit" >Generate Meals</button>
-        </div>
-    </form>
+    </div>
 
     <div id="loader">
         <div >
@@ -274,7 +305,9 @@
 </div>
 
 
+<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
 
-    
 </body>
+
 </html>

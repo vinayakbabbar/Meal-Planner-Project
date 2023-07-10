@@ -29,22 +29,22 @@ generateMealsButton.addEventListener("click",function(event){
     loader.style.display="block";
 
 
-    if(gender.value=='male'){
+    if(gender.value=='Male'){
         console.log('male value selected');
         let BMR = 66.47 + (13.75 * weight.value) + (5.003 * height.value) - (6.755 * age.value);
                          
         console.log(BMR)
-        if(activity.value=="light"){
+        if(activity.value=="Light"){
             var caloriesRequirment= BMR * 1.375;
             console.log(caloriesRequirment);
 
         }
-        else if(activity.value=="moderate"){
+        else if(activity.value=="Moderate"){
             var  caloriesRequirment= BMR * 1.55;
             console.log(caloriesRequirment);
 
         }
-        else if(activity.value=="active"){
+        else if(activity.value=="Active"){
             var  caloriesRequirment= BMR * 1.725;
             console.log(caloriesRequirment);
 
@@ -52,22 +52,22 @@ generateMealsButton.addEventListener("click",function(event){
       
 
     }
-    else if(gender.value=='female'){
+    else if(gender.value=='Female'){
         console.log('female value selected');
         let BMR = 655.1 + (9.563 * weight.value) + (1.850 * height.value) - (4.676 * age.value);
                          
         console.log(BMR)
-        if(activity.value=="light"){
+        if(activity.value=="Light"){
             var  caloriesRequirment= BMR * 1.375;
             console.log(caloriesRequirment);
 
         }
-        else if(activity.value=="moderate"){
+        else if(activity.value=="Moderate"){
             var  caloriesRequirment= BMR * 1.55;
             console.log(caloriesRequirment);
 
         }
-        else if(activity.value=="active"){
+        else if(activity.value=="Active"){
             var  caloriesRequirment= BMR * 1.725;
             console.log(caloriesRequirment);
 
@@ -381,6 +381,31 @@ receipeButton2.addEventListener('click',()=>{
       navbar.classList.remove('active');
     }
   });
+
+
+
+  function showGender(anything){
+ 
+    document.querySelector(".textbox-gender").value=anything;
+  }
+
+  let  dropdownGender = document.querySelector('.dropdown-gender');
+  dropdownGender.onclick=function(){
+    dropdownGender.classList.toggle('active');
+  }
+
+
+
+
+  function showActivity(anything){
+ 
+    document.querySelector(".textbox-activity").value=anything;
+  }
+
+  let  dropdownActivity = document.querySelector('.dropdown-activity');
+  dropdownActivity.onclick=function(){
+    dropdownActivity.classList.toggle('active');
+  }
  
 
 

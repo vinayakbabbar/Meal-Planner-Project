@@ -4,15 +4,12 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+  
 }
 
-nav{
-    /* text-align: left;
-    background: rgb(252,128,25);
-    background: linear-gradient(63deg, rgba(252,128,25,1) 0%, rgba(255,255,255,1) 100%);
-    width: auto;
-    height:5rem; */
 
+
+nav{
     position: fixed;
     top: 0;
     text-align: left;
@@ -22,12 +19,19 @@ nav{
     width: 100%;
     padding: 20px;
     height:5rem;
-    z-index: 1;
-    
+    z-index: 1;    
 }
 nav.active {
     background-color: rgb(255, 255, 255); /* Change background color on scroll */
-  }
+}
+
+body{
+    text-align: center;
+    /* height: auto; */   
+}
+.hero{
+    height:  41.1rem;
+}
 
 .bg-video{
     width: 1263px;
@@ -59,6 +63,14 @@ h2{
     font-family:sans-serif
     
 }
+.form-heading{
+    color: #fc8019;
+    font-style: normal;
+    font-size:3rem;
+    font-family:sans-serif;
+    margin-top:2rem;
+}
+
 .generate-meals{
     width: 14rem;
     height: 3rem;
@@ -110,24 +122,36 @@ grid-template-columns: auto;
 
 }
 
-form{
-    background-color: #f6a563;
-    height: 100vh;
+.form-filling{
+    
+    height: 34.1rem;
+    /* margin-top: 0; */
+    
 }
+#form{
+
+    background-color: #99f663;
+    width: 21rem;
+    height: 29rem;
+    margin-left: 4rem;
+    border-radius: 2rem;
 
 
-form>div{
-    margin-top: 3.125rem;
+}
+.standing-man{
+    width:22rem;
+    height: 28rem;
+}
+.form-gif{
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top:1rem;
     justify-content: space-around;
     
 }
-body{
-    text-align: center;
-    height: auto;
-}
+
+
+
 
 .meal-container-hide{
     display:none;
@@ -158,25 +182,235 @@ body{
     background-color: cornflowerblue;
     cursor: pointer;
 }
+.inputBox{
+    position:relative;
+    width: 250px;
+    margin: 2rem 1rem;
+}
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size:1em;
+    transition: 0.5s;
 
 
-input,select{
+
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: green;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: aqua;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: white;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    letter-spacing: 0.2em;    
+}
+
+.inputBox input:valid,
+.inputBox input:focus
+{
+    border: 1px solid aqua;
+}
+
+.dropdown-gender::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    right: 5rem;
+    top:15px;
+    z-index: 1;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: .5s;
+    pointer-events: none;
+}
+
+.dropdown-gender.active::before{
+    top:22px;
+    transform: rotate(-225deg);
+   
+} 
+.dropdown-gender{
+    position: relative;
+    height: 41px;
+}
+
+.dropdown-gender input{
+    position: absolute;
+    top:0;
+    left: 1rem;
+    width:15.5rem;
+    height:2.5rem;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-gender .option{
+    position: absolute;
+    top:45px;
+    left: 1rem;
+    width:15.5rem;
+    /* height:2.5rem; */
+    background: #fff;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+}
+.dropdown-gender.active .option{
+    display: block;
+}
+
+
+
+.dropdown-gender .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dropdown-gender .option div:hover{
+    background: aqua;
+    color: #fff;
+}
+.dropdown-gender .option div ion-icon{
+    position: relative;
+    top:4px;
+    font-size:1.2em
+}
+
+
+.dropdown-activity::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    right: 5rem;
+    top:15px;
+    z-index: 1;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: .5s;
+    pointer-events: none;
+}
+
+.dropdown-activity.active::before{
+    top:22px;
+    transform: rotate(-225deg);
+   
+} 
+.dropdown-activity{
+    position: relative;
+    height: 41px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+}
+
+.dropdown-activity input{
+    position: absolute;
+    top:0;
+    left: 1rem;
+    width:15.5rem;
+    height:2.5rem;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-activity .option{
+    position: absolute;
+    top:45px;
+    left: 1rem;
+    width:15.5rem;
+    /* height:2.5rem; */
+    background: #fff;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.dropdown-activity.active .option{
+    display: block;
+}
+
+
+
+.dropdown-activity .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.dropdown-activity .option div:hover{
+    background: aqua;
+    color: #fff;
+}
+.dropdown-activity .option div ion-icon{
+    position: relative;
+    top:4px;
+    font-size:1.2em
+}
+
+
+
+
+/* input,select{
    border: 0px;
    background-color: rgb(231, 224, 219);
    border-radius: 10px;
    width:200px;
    height:30px;
    padding-left: 10px;
-}
+} */
 #generate-meals-button{
+  
     border: 0px;
     background-color: rgb(215, 94, 8);
     border-radius: 10px;
-    width:200px;
-    height:30px;
+    width: 314px;
+    height: 45px;
     padding-left: 10px;
-    color:aliceblue;
+    color: aliceblue;
     cursor: pointer;
+    /* position: relative; */
+    /* left: 0px; */
+    font-size: x-large;
+}
+#generate-meals-button a{
+    text-decoration: none;
+    color: aliceblue;
 }
 
 
