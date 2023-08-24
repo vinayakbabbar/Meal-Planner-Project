@@ -407,15 +407,3 @@ receipeButton2.addEventListener('click',()=>{
     dropdownActivity.classList.toggle('active');
   }
  
-
-
-
-
-
-
-
-
-
-
-
-   
