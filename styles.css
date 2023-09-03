@@ -14,6 +14,7 @@ html{
 
   body {
     overflow-x:hidden;  
+    text-align: center;
   }
 
   /* Style the scrollbar */
@@ -38,16 +39,19 @@ nav{
     /* position: fixed; */
     top: 0;
     text-align: left;
-    background: rgba(255, 254, 254, 0.495);
+    /* background: rgba(255, 254, 254, 0.495); */
+    /* background: #3586ff; */
+    background: #ffffff;
     border-bottom: 1px solid white;
     color: #f2f2f2;
+    /* color: #215af9; */
     width: 100%;
     padding: 1.25rem;
     height:5rem;
     z-index: 1;    
 }
 nav.active {
-    background-color: rgb(255, 255, 255); /* Change background color on scroll */
+    background-color: #ffffff; /* Change background color on scroll */
 }
 
 #logo{
@@ -58,31 +62,31 @@ nav.active {
     cursor: pointer;
 }
 
-body{
-    text-align: center;
-    /* height: auto; */   
-}
+
 
 /* hero ----------------------------------------------------------------------------------- */
 .hero{
     height:  41.1rem;
+    width: 100vw;
 }
 
     .bg-video{
-        width: 78.938rem;
+        position: relative;
+        width: 100vw;
+        top: 0;
+        height: 41.1rem;
+        z-index: -1;
+        object-fit: cover;
+        
         
     }
     .heading{
         position: absolute;
-        top: 5rem;
-        /* left:26rem; */    
-        width:78.938rem;
-        height: 41.7rem;
+        top: 5rem; 
+        width:100vw;
+        height:41.1rem;
         padding-top: 12rem;    
-        background: rgba(255, 254, 254, 0.495);
-        
-        /* border-radius: 2rem; */
-        
+        background: rgba(247, 221, 221, 0.434);        
         text-transform: uppercase;  
     }
         h1{
@@ -139,6 +143,7 @@ body{
         color: #fc8019;
         font-style: normal;
         font-size:3rem;
+        max-width: 95vw;
        
         margin-top:2rem;
 
@@ -176,7 +181,8 @@ body{
 
             .inputBox{
                 position:relative;
-                width:15.625rem;
+                /* width:15.625rem; */
+                width:90%;
                 margin: 2rem 1rem;
 
             }
@@ -232,7 +238,7 @@ body{
                 width: .5rem;
                 height: .5rem;
                 border: 2px solid #fc8019;  
-                right: 5rem;
+                right: 2rem;
                 top:0.938rem;
                 z-index: 1;
                 border-top: 2px solid #f8f1ea;
@@ -265,7 +271,8 @@ body{
                 position: absolute;
                 top:0;
                 left: 1rem;
-                width:15.5rem;
+                /* width:15.5rem; */
+                width: 90%;
                 height:2.5rem;
                 cursor: pointer;
                 background:#f8f1ea ;
@@ -283,7 +290,8 @@ body{
                 position: absolute;
                 top:2.813rem;
                 left: 1rem;
-                width:15.5rem;
+                /* width:15.5rem; */
+                width: 90%;
                 /* height:2.5rem; */
                 background: #fff;
                 box-shadow: 0 30px 30px rgba(0,0,0,0.05);
@@ -330,7 +338,7 @@ body{
                 width: 8px;
                 height: 8px;
                 border: 2px solid #fc8019;
-                right: 5rem;
+                right: 2rem;
                 top:.938rem;
                 z-index: 1;
                 border-top: 2px solid #f8f1ea;
@@ -365,7 +373,8 @@ body{
                 position: absolute;
                 top:0;
                 left: 1rem;
-                width:15.5rem;
+                /* width:15.5rem; */
+                width: 90%;
                 height:2.5rem;
                 cursor: pointer;
                 background: #f8f1ea ;
@@ -383,7 +392,8 @@ body{
                 position: absolute;
                 top:2.813rem;
                 left: 1rem;
-                width:15.5rem;
+                /* width:15.5rem; */
+                width: 90%  ;
                 /* height:2.5rem; */
                 background: #fff;
                 box-shadow: 0 30px 30px rgba(0,0,0,0.05);
@@ -422,7 +432,8 @@ body{
                 border: 0px;
                 background-color: #fc8019;
                 border-radius: 10px;
-                width: 19.625rem;
+                /* width: 19.625rem; */
+                width: 90%;
                 height: 2.813rem;
                 padding-left: 10px;
                 color: white;
@@ -729,7 +740,8 @@ grid-template-columns: auto;
     width: 100%;
     z-index: 998;
     height: 10rem;
-    background-color: (255 255 255 / 0%)
+    background-color: (255 255 255 / 0%);
+    margin-top:2rem;
 
 }
                 
@@ -738,6 +750,7 @@ grid-template-columns: auto;
 
 footer{
     position:relative;
+    bottom: 0;
     width:100%;
     background: #3586ff;
     min-height: 6.25rem;  

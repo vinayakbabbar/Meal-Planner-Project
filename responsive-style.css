@@ -1,0 +1,400 @@
+
+/* Mobile devices */
+@media screen and (max-width:480px) {
+    #logo{
+        max-width: 100%;
+    }
+    .hero{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .bg-video{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 90vh;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .heading{
+        top:0;
+        max-height: 90vh;
+        min-height: 90vh;
+    }
+
+    h1{
+        font-size: 3rem;
+        max-width:100%;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    .generate-meals{
+        width:60vw;
+        word-wrap: break-word;
+        min-height: 3rem;
+    }
+    
+    .form-filling{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .form-heading{
+        width: 80vw;
+        font-size: 2.5rem;
+    }
+    .form-gif{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+    }
+    #form{
+        width: 100%;
+        margin: 0 1rem 0 1rem;
+        align-content: center;
+    }
+    .standing-man {
+        width: 100%;
+    }
+
+    .meal-container-show{      
+       
+        flex-direction: column;
+        position: relative; 
+        width: auto;
+        height: auto;
+        gap: 4rem;
+    }
+
+    .cards{
+        width:94vw;
+        
+    }
+
+    .img,.info{
+        width:100%;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 0;
+
+    }
+    .ingredients,.steps,.equipment{
+        width:95vw;
+        
+       
+    }
+    #receipe1{
+        width: 100%;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+}
+
+/* iPads, Tablets */
+@media screen and (min-width:481px) and (max-width:768px) {
+    .form-filling{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .form-gif{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+    }
+
+    #breakfast>span,#lunch>span, #dinner>span{
+        font-size:x-large;       
+        color: #060606;
+        /* font-style: italic; */
+        font-weight: 600;
+        text-transform:capitalize;
+
+    }
+
+    .meal-container-show{      
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+    }
+
+
+
+    
+    .cards{
+        width:30vw;
+    
+        
+    }
+
+    .img{
+        width:100%;
+        height: 13rem;
+    }
+    .info{
+        width:100%;
+        min-height: 7rem;
+
+    }
+    .meal-name{
+        font-size:1em;
+        word-wrap: break-word;
+        color: #060606;
+        font-weight:500;
+        padding: 0 5px 0 5px;
+        margin-bottom: 10px;
+       
+
+    }
+    #get-receipe1,#get-receipe2,#get-receipe3{
+        max-width:8em;
+        min-height: 2rem;
+        position:absolute;
+        bottom: .5rem;
+        
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+
+    }
+    #receipe1{
+        width: 100%;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    .ingredients,.steps,.equipment{
+        width:100%;
+        
+       
+    }
+    
+}
+
+/* Small screens, laptops */
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+
+
+    .form-filling{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .form-gif{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90vw;
+    }
+
+    #form{
+        -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        -moz-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+    }
+
+    #breakfast>span,#lunch>span, #dinner>span{
+        font-size:x-large;       
+        color: #060606;
+        /* font-style: italic; */
+        font-weight: 600;
+        text-transform:capitalize;
+
+    }
+
+    .meal-container-show{      
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+       
+    }
+    
+    .cards{
+        width:30vw;
+    
+        
+    }
+
+    .img{
+        width:100%;
+        height: 13rem;
+    }
+    .info{
+        width:100%;
+        min-height: 7rem;
+
+    }
+    .meal-name{
+        font-size:1em;
+        word-wrap: break-word;
+        color: #060606;
+        font-weight:500;
+        padding: 0 5px 0 5px;
+        margin-bottom: 10px;
+       
+
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+
+    }
+    #receipe1{
+        width: 100%;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    
+}
+
+/* Desktops, large screens */
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    #form{
+        -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        -moz-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+    }
+
+    .cards{
+        width:30vw;
+        
+    
+        
+    }
+    
+    .img{
+        width:100%;
+        height: 19rem;
+    }
+    .info{
+        width:100%;
+        min-height: 7rem;
+
+    }
+    .meal-container-show{      
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+       
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+
+    }
+    #receipe1{
+        width: 100%;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    
+}
+
+/* Extra large screens, TV  */
+@media screen and (min-width:1201px) {
+
+
+    #form{
+        -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        -moz-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+        box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.22);
+    }
+
+    .cards{
+        width:30vw;
+        
+    
+        
+    }
+    
+    .img{
+        width:100%;
+        height: 19rem;
+    }
+    .info{
+        width:100%;
+        min-height: 7rem;
+
+    }
+    .meal-container-show{      
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+       
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        padding: 0 4rem 0 4rem;
+        height: auto;
+        gap: 1rem;
+
+    }
+    #receipe1{
+        width: 100%;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    
+    
+}
