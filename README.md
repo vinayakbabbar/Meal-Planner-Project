@@ -9,6 +9,8 @@ Description:- With this meal planner you can not worry about what food you make 
 
 a). I chose this project because in our fast lifestyle we dont want take a repetative decision of what we will be eat today or tommorrow and never compromise with health also, and this app is usefull for home makers. 
 
-b). Tech Stack:- HTML, CSS, JavaScript
+b). Tech Stack:- HTML, CSS, JavaScript.
 
-c). I add a feature Like - 
+c). Features - Responsiveness, API Integration.
+
+Hosted Link:-https://mealplannerproject.netlify.app/
