@@ -13,5 +13,6 @@ b). Tech Stack:- HTML, CSS, JavaScript.
 
 c). Features - Responsiveness, API Integration.
 
-Hosted Link:-https://mealplannerproject.netlify.app/
+Hosted Link:-https://mealplannerproject.netlify.app/<br>
+
 Code Link:- https://github.com/vinayakbabbar/Meal-Planner-Project
